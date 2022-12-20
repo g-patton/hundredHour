@@ -56,6 +56,8 @@
       <p><%= post.details %></p>
       <p>Days: <%= post.days %> </p>
       <p>Price: $<%= post.price %> </p>
+      <p>Price per day: $<%= (post.price/post.days).toFixed(2) %> </p>
+
     </div>
     <div class="col-6 mt-5">
       <a class="btn btn-primary" href="/profile">Return to Profile</a>
