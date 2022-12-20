@@ -1,0 +1,45 @@
+<%- include('partials/header') -%>
+<main>
+  <div class="hero min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1670960058964-79063a8ecc91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');">
+    <div class="hero-overlay bg-opacity-60"></div> 
+    <div class="hero-content text-center text-neutral-content">
+  
+  <section class="form-control login-form">
+    <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+    <div class="alert alert-danger"><%= el.msg %></div>
+    <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+    messages.info.forEach( el => { %>
+    <div class="alert alert-info"><%= el.msg %></div>
+    <% }) %> <% } %>
+    <form action="/login" method="POST">
+      <div>
+        <label for="exampleInputEmail1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          name="password"
+        />
+      </div>
+      <button type="button" class="btn btn-outline-success">Submit</button>
+    </form>
+  </section>
+
+  </div>
+  
+</div>
+</main>
+
+<%- include('partials/footer') -%>

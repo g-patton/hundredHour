@@ -1,0 +1,28 @@
+<%- include('partials/header') -%>
+<%- include('partials/loggedInNav') -%>
+<div class="hero min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1670960058964-79063a8ecc91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');">
+  <div class="hero-overlay bg-opacity-20"></div> 
+  <div class="hero-content text-center text-neutral-content">
+
+<div class="container border border-primary bg-white text-dark">
+  <div class="row justify-content-center mt-5">
+    <ul class="row list-unstyled">
+      <% for(var i=0; i<posts.length; i++) {%>
+        <li class="col-6 justify-content-between mt-5">
+          <a href="/post/<%= posts[i]._id%>">
+            <p><%= posts[i].title %> </p>
+            <img class="img-fluid" src="<%= posts[i].image%>">
+          </a>
+        </li>
+      <% } %>
+      </ul>
+  </div>
+  <div class="col-6 mt-5">
+    <a class="btn btn-primary" href="/profile">Return to Profile</a>
+    
+  </div>
+</div>
+</div>
+</div>   
+
+<%- include('partials/footer') -%>

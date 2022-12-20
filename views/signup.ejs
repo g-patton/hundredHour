@@ -1,0 +1,54 @@
+<%- include('partials/header') -%>
+<main>
+  <div class="hero min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1670960058964-79063a8ecc91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');">
+    <div class="hero-overlay bg-opacity-60"></div> 
+    <div class="hero-content text-center text-neutral-content">
+
+
+        <div class="row justify-content-center">
+            <section class="col-6 mt-5">
+                <% if (locals.messages.errors) { %>
+                    <% messages.errors.forEach( el => { %>
+                        <div class="alert alert-danger"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <% if (locals.messages.info) { %>
+                    <% messages.info.forEach( el => { %>
+                        <div class="alert alert-info"><%= el.msg %></div>
+                    <% }) %>    
+                <% } %>
+                <form action="/signup" method="POST">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="userName" name="userName">
+                      </div>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                      <div id="emailHelp" class="form-text signuptext">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                      </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </section>
+          </div>
+
+
+        </div>
+        
+      </div>
+        
+
+
+    </main>
+
+
+
+<%- include('partials/footer') -%>

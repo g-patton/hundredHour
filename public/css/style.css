@@ -1,0 +1,9 @@
+.signuptext {
+    color: white;
+}
+
+.navbar {
+    position: relative;
+    z-index: 10000;
+    border: 3px black;
+}
