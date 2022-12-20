@@ -1,4 +1,4 @@
-Will be a social media app clone
+Project in progress.  Will be an app to plan vacations with friends.
 
 # Install
 
