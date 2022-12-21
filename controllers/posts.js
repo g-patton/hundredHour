@@ -4,9 +4,10 @@ const Comment = require("../models/Comment")
 const User = require("../models/User");
 
 module.exports = {
+  
   getAccounts: async (req, res) => {
     try {
-      const post = await Post.find({ user: req.user.id });
+      const user = await User.find({ user: req.user.id });
       res.render("account.ejs", { user: req.user });
     } catch (err) {
       console.log(err);
@@ -16,7 +17,7 @@ module.exports = {
   
 
 
-  
+
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
