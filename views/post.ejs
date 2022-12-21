@@ -53,10 +53,17 @@
 
     </div>
     <div class="col-3 mt-5">
+      <h3>Post by:</h3>
+      <p><%= user.userName %></p>
+      <br>
       <p><%= post.details %></p>
+      <br>
       <p>Days: <%= post.days %> </p>
+      <br>
       <p>Price: $<%= post.price %> </p>
+      <br>
       <p>Price per day: $<%= (post.price/post.days).toFixed(2) %> </p>
+      <br>
 
     </div>
     <div class="col-6 mt-5">

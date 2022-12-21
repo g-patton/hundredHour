@@ -1,25 +1,46 @@
 <%- include('partials/header') -%>
 <%- include('partials/loggedInNav') -%>
-  
-<div>
-    <h1>Account Info:</h1>
-    <br>
-    <h2>Username:</h2>
-    <p><%= user.userName %></p>
-    <br>
 
-    <h2>Account Email:</h2>
-    <p><%= user.email %></p>
-    <br>
+<div class="hero min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1670960058964-79063a8ecc91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');">
+  <div class="hero-overlay bg-opacity-20"></div> 
+  <div class="hero-content text-center text-neutral-content">
+
+    <div class="container border border-primary bg-white text-dark rounded">
+
+      <div>
+          <h1>Account Info:</h1>
+          <br>
+          <h2>Username:</h2>
+          <p><%= user.userName %></p>
+          <br>
+
+          <h2>Account Email:</h2>
+          <p><%= user.email %></p>
+          <br>
+
+          <h3>Member Since:</h3>
+          <p><%= user.createdAt.toDateString() %></p>
+          <br>
+
+          <h3>Group Name:</h3>
+          <% if (user.groupName) { %>
+            <p> <%= user.groupName %> </p>
+            <%} else { %>
+            <p> No Group </p>
+            <% } %>
+          <br>
 
 
 
-    <p> not <%= user.userName %>? Log out here: </p>
-    <a href="/logout" class="col-4 btn btn-primary">Logout</a>
-</div>
+          <p> not <%= user.userName %>? Log out here: </p>
+          <a href="/logout" class="col-4 btn btn-primary">Logout</a>
+      </div>
 
+      <div class="bottom-btn-section">
+        <a class="btn btn-primary bottom-btn" href="/profile">Return to post creation</a>
+      </div>
 
-    <div class="bottom-btn-section">
-      <a class="btn btn-primary bottom-btn" href="/profile">Return to post creation</a>
     </div>
+  </div>
+</div>
 <%- include('partials/footer') -%>

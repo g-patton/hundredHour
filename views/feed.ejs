@@ -17,6 +17,7 @@
                 <a href="/post/<%= posts[i]._id%>">
                   
                   <img class="img-fluid" src="<%= posts[i].image%>">
+                  <h3>Location:</h3>
                   <p><%= posts[i].title %> </p>
                   <p><%= posts[i].days %> day trip</p>
                   <p>Price per day: $<%= (posts[i].price/posts[i].days).toFixed(2) %> </p>
