@@ -17,25 +17,47 @@
                         <div class="alert alert-info"><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
+
+
+                
                 <form action="/signup" method="POST">
-                    <div class="mb-3">
+                    
+                  <div class="mb-3">
                         <label for="userName" class="form-label">User Name</label>
                         <input type="text" class="form-control" id="userName" name="userName">
-                      </div>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                      <div id="emailHelp" class="form-text signuptext">We will never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
-                      </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="groupName" class="form-label">Group Name</label>
+                    <input type="text" class="form-control" id="groupName" name="groupName">
+                    <div id="groupName" class="form-text signupnote">Be sure to format same as your other group members.</div>
+
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                    <div id="emailHelp" class="form-text signuptext">We will never share your email with anyone else.</div>
+                  </div>
+
+                  <!-- <div class="mb-3">
+                    <label for="imgUpload" class="form-label">Profile Pic</label>
+                    <label class="input-group">
+                      <input type="file" class="form-control signuptext" id="profileImageUpload" name="file">
+                    </label>
+                    <div id="imageHelp" class="form-text">Choose a photo to be your profile picture.</div>
+                  </div> -->
+
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="confirmPassword" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                  </div>
+
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  
                   </form>
             </section>
           </div>

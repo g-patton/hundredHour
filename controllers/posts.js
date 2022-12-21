@@ -14,10 +14,6 @@ module.exports = {
     }
   },
 
-  
-
-
-
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });

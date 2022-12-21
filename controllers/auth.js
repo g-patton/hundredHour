@@ -1,6 +1,7 @@
 const passport = require("passport");
 const validator = require("validator");
 const User = require("../models/User");
+const cloudinary = require("../middleware/cloudinary")
 
 exports.getLogin = (req, res) => {
   if (req.user) {
@@ -66,7 +67,9 @@ exports.getSignup = (req, res) => {
 };
 
 
+
 exports.postSignup = (req, res, next) => {
+  
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
     validationErrors.push({ msg: "Please enter a valid email address." });
@@ -89,6 +92,9 @@ exports.postSignup = (req, res, next) => {
     userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
+    groupName: req.body.groupName,
+    // profileImage: result.secure_url,
+    // cloudinaryId: result.public_id,
   });
 
   User.findOne(
