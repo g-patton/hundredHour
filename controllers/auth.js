@@ -65,6 +65,7 @@ exports.getSignup = (req, res) => {
   });
 };
 
+
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))

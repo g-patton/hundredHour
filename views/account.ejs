@@ -1,0 +1,25 @@
+<%- include('partials/header') -%>
+<%- include('partials/loggedInNav') -%>
+  
+<div>
+    <h1>Account Info:</h1>
+    <br>
+    <h2>Username:</h2>
+    <p><%= user.userName %></p>
+    <br>
+
+    <h2>Account Email:</h2>
+    <p><%= user.userName %></p>
+    <br>
+
+
+
+    <p> not <%= user.userName %>? Log out here: </p>
+    <a href="/logout" class="col-4 btn btn-primary">Logout</a>
+</div>
+
+
+    <div class="bottom-btn-section">
+      <a class="btn btn-primary bottom-btn" href="/profile">Return to post creation</a>
+    </div>
+<%- include('partials/footer') -%>
