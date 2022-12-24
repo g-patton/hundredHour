@@ -4,32 +4,33 @@
   <div class="hero-overlay bg-opacity-20"></div> 
   <div class="hero-content text-center text-neutral-content flex-column d-flex">
 
-      <div class="divforbutton col-3 mt-5">
+      <div class="divforbutton col mt-5">
         <a class="btn btn-primary" href="/profile">Return to Profile</a>
       </div>
-
       <div class="container text-dark">
-        <div class="row justify-content-center mt-5">
-          <ul class="row list-unstyled">
-            <% for(var i=0; i<posts.length; i++) {%>
-              <li class="col-6 justify-content-between mt-4 mb-4">
-                <div class = 'bg-white p-1 rounded'>
-                <a href="/post/<%= posts[i]._id%>">
-                  
-                  <img class="img-fluid" src="<%= posts[i].image%>">
-                  <h3>Location:</h3>
-                  <p><%= posts[i].title %> </p>
-                  <p><%= posts[i].days %> day trip</p>
-                  <p>Price per day: $<%= (posts[i].price/posts[i].days).toFixed(2) %> </p>
-                </a>
-              </div>
-              </li>
-            <% } %>
-            </ul>
-        </div>
+
+          <div class="row justify-content-center mt-5">
+            <ul class="row list-unstyled">
+              <% for(var i=0; i<posts.length; i++) {%>
+                <li class="col-6 justify-content-between mt-4 mb-4">
+                  <div class="card border mb-3" style="max-width: 18rem;">
+                    <img class = "card-img-top" src = "<%= posts[i].image%>">
+                    <div class="card-body">
+                      <h4 class="card-title">Location : <%= posts[i].title %></h4>
+                          <p class="card-text">
+                            <%= posts[i].days %> day trip<br>
+                            Price per day: $<%= (posts[i].price/posts[i].days).toFixed(2) %>
+                          </p>
+                    </div>
+                </div>
+                </li>
+              <% } %>
+              </ul>
+          </div>
+          
+          
       </div>
-    
-</div>
+  </div>
 </div>     
 
 <%- include('partials/footer') -%>
