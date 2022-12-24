@@ -11,3 +11,15 @@
 .signupnote {
     color: rgb(224, 224, 224) !important;
 }
+
+.largestfeeddiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+.divforbutton {
+    width: 100%;
+}
+.feeddiv{
+    display: flex;
+    justify-content: center !important;
+}

@@ -1,19 +1,21 @@
 <%- include('partials/header') -%>
 <%- include('partials/loggedInNav') -%>
-<div class="hero min-h-screen" style="background-image: url('https://images.unsplash.com/photo-1670960058964-79063a8ecc91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');">
+<div class="hero min-h-screen " style="background-image: url('https://images.unsplash.com/photo-1670960058964-79063a8ecc91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80');">
   <div class="hero-overlay bg-opacity-20"></div> 
-  <div class="hero-content text-center text-neutral-content flex-column d-flex">
+  <div class="hero-content text-center text-neutral-content largestfeeddiv">
 
-      <div class="divforbutton col mt-5">
+      <div class="divforbutton mt-5 ">
         <a class="btn btn-primary" href="/profile">Return to Profile</a>
       </div>
+      
+      
       <div class="container text-dark">
 
-          <div class="row justify-content-center mt-5">
+          <div class="row d-flex justify-content-center mt-5">
             <ul class="row list-unstyled">
               <% for(var i=0; i<posts.length; i++) {%>
-                <li class="col-6 justify-content-between mt-4 mb-4">
-                  <div class="card border mb-3" style="max-width: 18rem;">
+                <li class="feeddiv col-lg-4 col-md-6 col-sm-12  mt-4 mb-4">
+                  <div class="card border mb-3 h-100" style="max-width: 18rem;">
                     <img class = "card-img-top" src = "<%= posts[i].image%>">
                     <div class="card-body">
                       <h4 class="card-title">Location : <%= posts[i].title %></h4>
