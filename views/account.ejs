@@ -7,7 +7,7 @@
 
     <div class="container border border-primary bg-white text-dark rounded">
 
-      <div>
+      <div class="accountinfo mt-2">
           <h1>Account Info:</h1>
           <br>
           <h2>Username:</h2>
@@ -32,13 +32,15 @@
 
 
 
-          <p> not <%= user.userName %>? Log out here: </p>
+          <p> not <%= user.userName %>? Log out here: </p> <br>
           <a href="/logout" class="col-4 btn btn-primary">Logout</a>
       </div>
+      <br>
 
       <div class="bottom-btn-section">
         <a class="btn btn-primary bottom-btn" href="/profile">Return to post creation</a>
       </div>
+      <br>
 
     </div>
   </div>
