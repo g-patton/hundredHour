@@ -34,3 +34,20 @@
     font-weight: 600;
 
 }
+/* .fa-heart{
+    color: rgb(255, 59, 59) !important;
+}
+.fa-trash{
+    color: rgb(0, 157, 0) !important;
+}
+.fa-trash:hover{
+    color: white !important;
+} */
+
+form .btn {
+    color: rgb(0, 0, 152) !important;
+    
+}
+form .btn:hover {
+    color: white !important;
+}
