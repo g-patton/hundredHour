@@ -17,7 +17,8 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
-      res.render("profile.ejs", { posts: posts, user: req.user });
+      const feed = await Post.find().sort({ createdAt: "desc" }).lean();
+      res.render("profile.ejs", { posts: posts, user: req.user, feed: feed });
     } catch (err) {
       console.log(err);
     }

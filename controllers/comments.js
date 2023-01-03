@@ -6,6 +6,7 @@ module.exports = {
         comment: req.body.comment,
         likes: 0,
         post: req.params.id,
+        date: req.params.createdAt,
       });
       console.log("Comment has been added!");
       res.redirect("/post/" + req.params.id);
